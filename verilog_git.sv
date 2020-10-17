@@ -1,13 +1,11 @@
 module verilog_git
 (
-    input logic a
+    output logic a
 );
 
 logic b;
- always_comb
-   begin
-       a= 1;
-   end
+   submodule submodule1
+   (.c (a));
 
    submodule submodule1
    (.c (b));
